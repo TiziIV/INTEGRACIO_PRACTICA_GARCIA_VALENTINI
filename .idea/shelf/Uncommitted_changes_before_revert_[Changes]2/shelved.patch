@@ -1,0 +1,15 @@
+Index: src/Ejercicio_2/Continente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Ejercicio_2/Continente.java b/src/Ejercicio_2/Continente.java
+new file mode 100644
+--- /dev/null	(date 1787057254962)
++++ b/src/Ejercicio_2/Continente.java	(date 1787057254962)
+@@ -0,0 +1,5 @@
++package Ejercicio_2;
++
++public class Continente {
++
++}
