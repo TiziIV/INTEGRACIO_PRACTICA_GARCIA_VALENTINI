@@ -1,0 +1,47 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Continente {
+    - nombre: String
+    + getNombre(): String
+}
+
+class Pais {
+    - nombre: String
+    + getNombre(): String
+    + getCapital(): Ciudad
+    + setCapital(ciudad: Ciudad): void
+    + agregarProvincia(provincia: Provincia): void
+    + agregarLimite(pais: Pais): void
+}
+
+class Provincia {
+    - nombre: String
+    + getNombre(): String
+    + getCapital(): Ciudad
+    + setCapital(ciudad: Ciudad): void
+    + agregarCiudad(ciudad: Ciudad): void
+    + agregarLimiteProvincial(prov: Provincia): void
+    + agregarLimitePais(pais: Pais): void
+}
+
+class Ciudad {
+    - nombre: String
+    + getNombre(): String
+}
+
+' Relaciones Todo-Parte
+Continente "1" o-- "1..*" Pais : se localiza en <
+Pais "1" *-- "1..*" Provincia : tiene >
+Provincia "1" *-- "1..*" Ciudad : tiene >
+
+' Roles de capital
+Pais "0..1" --> "1" Ciudad : capital
+Provincia "0..1" --> "1" Ciudad : capital
+
+' Fronteras y Límites
+Pais "0..*" -- "0..*" Pais : limita con
+Provincia "0..*" -- "0..*" Provincia : limita con (mismo país)
+Provincia "0..*" --> "0..*" Pais : limita con
+
+@enduml
