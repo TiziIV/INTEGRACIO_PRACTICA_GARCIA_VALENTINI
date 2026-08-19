@@ -1,0 +1,98 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class SedeOlimpica {
+    - nombre: String
+    - presupuestoAproximado: double
+    - complejos: List<ComplejoDeportivo>
+    + getNombre(): String
+    + getPresupuestoAproximado(): double
+    + getNumeroComplejos(): int
+    + agregarComplejo(complejo: ComplejoDeportivo): void
+}
+
+abstract class ComplejoDeportivo {
+    - nombre: String
+    - localizacion: String
+    - jefeOrganizacion: String
+    - areaOcupadaM2: double
+    - areas: List<AreaDesignada>
+    - eventos: List<Evento>
+    + getNombre(): String
+    + getLocalizacion(): String
+    + getJefeOrganizacion(): String
+    + getAreaOcupadaM2(): double
+    + agregarArea(area: AreaDesignada): void
+    + programarEvento(evento: Evento): void
+}
+
+class ComplejoUnicoDeporte {
+    - deportePrincipal: String
+    + getDeportePrincipal(): String
+}
+
+class Polideportivo {
+    - cantidadCanchas: int
+    + getCantidadCanchas(): int
+}
+
+class AreaDesignada {
+    - nombre: String
+    - deporteAsignado: String
+    - indicadorSituacion: String
+    + getNombre(): String
+    + getDeporteAsignado(): String
+    + getIndicadorSituacion(): String
+}
+
+class Evento {
+    - nombre: String
+    - fecha: LocalDate
+    - duracionMinutos: int
+    - numParticipantes: int
+    - numComisariosRequeridos: int
+    - materiales: List<Material>
+    - comisarios: List<Comisario>
+    + getNombre(): String
+    + getFecha(): LocalDate
+    + getDuracionMinutos(): int
+    + getNumParticipantes(): int
+    + agregarMaterial(material: Material): void
+    + asignarComisario(comisario: Comisario): void
+}
+
+class Comisario {
+    - dni: String
+    - nombre: String
+    - eventosInvolucrado: List<Evento>
+    + getDni(): String
+    + getNombre(): String
+    + getEventosInvolucrado(): List<Evento>
+}
+
+class Material {
+    - codigo: String
+    - descripcion: String
+    - cantidad: int
+    + getCodigo(): String
+    + getDescripcion(): String
+    + getCantidad(): int
+}
+
+' Herencia de Complejos
+ComplejoDeportivo <|-- ComplejoUnicoDeporte
+ComplejoDeportivo <|-- Polideportivo
+
+' Composición y Organización de Sede
+SedeOlimpica "1" *-- "1..*" ComplejoDeportivo : contiene >
+ComplejoDeportivo "1" *-- "1..*" AreaDesignada : posee >
+ComplejoDeportivo "1" *-- "0..*" Evento : celebra >
+
+' Eventos, Comisarios y Materiales
+Evento "0..*" o-- "0..*" Material : requiere >
+Evento "0..*" <--> "1..*" Comisario : fiscalizado por / involucrado en >
+
+@enduml

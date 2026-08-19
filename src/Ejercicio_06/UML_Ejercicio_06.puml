@@ -1,0 +1,182 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class ComunidadAutonoma {
+    - nombre: String
+    - organismoResponsable: String
+    + getNombre(): String
+}
+
+class ParqueNacional {
+    - nombre: String
+    - fechaDeclaracion: LocalDate
+    + getNombre(): String
+    + agregarArea(area: Area): void
+    + agregarEntrada(entrada: Entrada): void
+    + agregarAlojamiento(alojamiento: Alojamiento): void
+}
+
+class Area {
+    - nombre: String
+    - extensionKm2: double
+    + getNombre(): String
+    + getExtensionKm2(): double
+}
+
+class Entrada {
+    - numero: int
+    + getNumero(): int
+}
+
+abstract class Especie {
+    - nombreCientifico: String
+    - nombreVulgar: String
+    + getNombreCientifico(): String
+    + getNombreVulgar(): String
+}
+
+class EspecieVegetal {
+    - tieneFloracion: boolean
+    - periodoFloracion: String
+    + isTieneFloracion(): boolean
+    + getPeriodoFloracion(): String
+}
+
+enum TipoAlimentacion {
+    HERBIVORO
+    CARNIVORO
+    OMNIVORO
+}
+
+class EspecieAnimal {
+    - periodoCelo: String
+    - tipoAlimentacion: TipoAlimentacion
+    + getPeriodoCelo(): String
+    + getTipoAlimentacion(): TipoAlimentacion
+    + agregarAlimento(especie: Especie): void
+}
+
+class CensoEspecie {
+    - numIndividuos: int
+    + getNumIndividuos(): int
+}
+
+class Visitante {
+    - dni: String
+    - nombre: String
+    - direccion: String
+    - profesion: String
+    + getDni(): String
+}
+
+class RegistroVisita {
+    - fecha: LocalDate
+    + getFecha(): LocalDate
+}
+
+class Alojamiento {
+    - nombre: String
+    - capacidad: int
+    - categoria: String
+    + getNombre(): String
+    + getCapacidad(): int
+}
+
+class Estancia {
+    - habitacion: String
+    - fechaInicio: LocalDate
+    - fechaFin: LocalDate
+    + getHabitacion(): String
+}
+
+class Excursion {
+    - codigo: String
+    - dia: LocalDate
+    - hora: LocalTime
+    + getCodigo(): String
+    + inscribirVisitante(visitante: Visitante): void
+}
+
+class Personal {
+    - dni: String
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    - sueldo: double
+    - numSeguridadSocial: String
+    + getDni(): String
+    + agregarRol(rol: RolPersonal): void
+}
+
+abstract class RolPersonal {
+}
+
+class Celador {
+    + registrarIngreso(visitante: Visitante, fecha: LocalDate): RegistroVisita
+}
+
+class Vehiculo {
+    - matricula: String
+    - tipo: String
+    + getMatricula(): String
+}
+
+class Guarda {
+}
+
+class Investigador {
+    - titulacion: String
+    + getTitulacion(): String
+}
+
+class ProyectoInvestigacion {
+    - nombre: String
+    - presupuesto: double
+    - fechaInicio: LocalDate
+    - fechaFin: LocalDate
+    + getNombre(): String
+}
+
+' Relaciones de Parques y Áreas
+ComunidadAutonoma "1..*" -- "1..*" ParqueNacional : abarca
+ParqueNacional "1" *-- "1..*" Area : contiene >
+ParqueNacional "1" *-- "1..*" Entrada : tiene >
+ParqueNacional "1" *-- "0..*" Alojamiento : gestiona >
+ParqueNacional "1" *-- "1..*" Personal : emplea >
+
+' Especies y Censo
+Especie <|-- EspecieVegetal
+Especie <|-- EspecieAnimal
+EspecieAnimal "0..*" --> "0..*" Especie : se alimenta de >
+
+Area "1" -- "0..*" CensoEspecie
+CensoEspecie "0..*" -- "1" Especie
+
+' Personal y Roles (Patrón Role)
+Personal "1" *-- "1..*" RolPersonal : desempeña >
+RolPersonal <|-- Celador
+RolPersonal <|-- Guarda
+RolPersonal <|-- Investigador
+
+Celador "1..*" --> "1" Entrada : destinado en >
+Celador "1" --> "0..*" RegistroVisita : registra >
+RegistroVisita "0..*" --> "1" Visitante : corresponde a >
+RegistroVisita "0..*" --> "1" Entrada : ingresa por >
+
+Guarda "1..*" --> "1" Area : asignado a >
+Guarda "1" --> "1" Vehiculo : patrulla en >
+
+Investigador "1..*" -- "0..*" ProyectoInvestigacion : participa en >
+ProyectoInvestigacion "0..*" --> "1..*" Especie : investiga >
+
+' Alojamiento y Excursiones
+Alojamiento "1" *-- "0..*" Estancia : registra >
+Estancia "0..*" --> "1" Visitante : hospedado >
+
+Alojamiento "1..*" -- "0..*" Excursion : organiza >
+Excursion "0..*" -- "0..*" Visitante : inscriptos >
+
+@enduml

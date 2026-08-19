@@ -1,0 +1,70 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+enum TipoMineral {
+    PRIMARIO
+    SECUNDARIO
+}
+
+class Mineral {
+    - nombre: String
+    - tipo: TipoMineral
+    + getNombre(): String
+    + getTipo(): TipoMineral
+    + esPrimario(): boolean
+}
+
+class Lote {
+    - nombre: String
+    - minerales: List<Mineral>
+    - historialSiembras: List<Cereal>
+    + agregarMineral(mineral: Mineral): void
+    + sembrar(cereal: Cereal): void
+    + contieneMineral(mineral: Mineral): boolean
+    + contieneTodosLosMinerales(requeridos: List<Mineral>): boolean
+    + tuvoPasturaPrevia(): boolean
+    + esEspecial(): boolean
+}
+
+abstract class Cereal {
+    - nombre: String
+    - mineralesRequeridos: List<Mineral>
+    + getNombre(): String
+    + agregarMineralRequerido(mineral: Mineral): void
+    + puedeSembrarseEn(lote: Lote): boolean
+}
+
+class CosechaGruesa {
+    + puedeSembrarseEn(lote: Lote): boolean
+}
+
+class CosechaFina {
+    + puedeSembrarseEn(lote: Lote): boolean
+}
+
+class Pastura {
+    + puedeSembrarseEn(lote: Lote): boolean
+}
+
+class Cooperativa {
+    - cerealesDisponibles: List<Cereal>
+    + getCerealesAptosParaLote(lote: Lote): List<Cereal>
+}
+
+' Herencia
+Cereal <|-- CosechaGruesa
+Cereal <|-- CosechaFina
+Cereal <|-- Pastura
+
+' Relaciones
+Mineral --> TipoMineral
+Lote "0..*" o-- "0..*" Mineral : composicion >
+Cereal "0..*" o-- "1..*" Mineral : requiere >
+Lote "0..*" --> "0..*" Cereal : historial >
+Cooperativa "1" --> "0..*" Cereal : catalogo
+Cooperativa "1" --> "0..*" Lote : evalua
+
+@enduml

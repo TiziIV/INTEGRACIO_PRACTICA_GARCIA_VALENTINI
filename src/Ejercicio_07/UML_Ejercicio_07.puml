@@ -1,0 +1,127 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class Campeonato {
+    - nombre: String
+    + agregarPrueba(prueba: Prueba): void
+    + getPruebas(): List<Prueba>
+}
+
+abstract class Prueba {
+    - nombre: String
+    - tipo: String
+    - fechaInicioPrevista: LocalDate
+    - fechaFinPrevista: LocalDate
+    - tiempoVencedor: double
+    + getNombre(): String
+    + registrarVencedor(participante: Participante, tiempo: double): void
+}
+
+class PruebaIndividual {
+}
+
+class PruebaEquipo {
+}
+
+abstract class Participante {
+    - codigo: String
+    + getCodigo(): String
+}
+
+class Esquiador {
+    - dni: String
+    - nombre: String
+    - fechaNacimiento: LocalDate
+    + getDni(): String
+    + getNombre(): String
+    + getEdad(): int
+    + esExclusivoEquipo(): boolean
+}
+
+class Equipo {
+    - entrenador: String
+    + getEntrenador(): String
+    + getCantidadEsquiadores(): int
+    + agregarEsquiador(esquiador: Esquiador): void
+}
+
+class ParticipacionPrueba {
+    - dorsal: int
+    - codigoParticipacion: String
+    - fechasCompeticion: List<LocalDate>
+    - tiempoEmpleado: double
+    - posicionObtenida: int
+    + getCodigoParticipacion(): String
+    + getTiempoEmpleado(): double
+    + getPosicionObtenida(): int
+}
+
+class Federacion {
+    - nombre: String
+    - numFederados: int
+    + getNombre(): String
+    + getNumFederados(): int
+    + agregarEstacion(estacion: EstacionEsqui): void
+}
+
+class EstacionEsqui {
+    - codigo: String
+    - nombre: String
+    - personasContacto: String
+    - direccion: String
+    - telefono: String
+    - kmTotalesEsquiables: double
+    + getCodigo(): String
+    + getNombre(): String
+    + agregarPista(pista: Pista): void
+}
+
+enum NivelDificultad {
+    VERDE
+    AZUL
+    ROJA
+    NEGRA
+}
+
+class Pista {
+    - numeroCorrelativo: int
+    - longitudKm: double
+    - dificultad: NivelDificultad
+    + getCodigoCompleto(): String
+    + getLongitudKm(): double
+    + agregarSubpista(subpista: Pista): void
+}
+
+' Herencia
+Prueba <|-- PruebaIndividual
+Prueba <|-- PruebaEquipo
+
+Participante <|-- Esquiador
+Participante <|-- Equipo
+
+' Campeonato y Pruebas
+Campeonato "1" *-- "1..*" Prueba : contiene >
+
+' Participación y Resultados
+Participante "1" <-- "0..*" ParticipacionPrueba : asignado a
+Prueba "1" *-- "0..*" ParticipacionPrueba : registra >
+Prueba "0..*" --> "0..1" Participante : vencedor
+
+' Equipos y Esquiadores
+Equipo "0..*" o-- "1..*" Esquiador : integra >
+ParticipacionPrueba "0..*" --> "0..*" Esquiador : esquiadoresActivos
+
+' Federación y Estaciones
+Federacion "1" <-- "0..*" Esquiador : pertenece a
+Federacion "1..*" -- "1..*" EstacionEsqui : administra >
+EstacionEsqui "1" *-- "1..*" Pista : contiene >
+
+' Relación de Pistas y Pruebas
+Prueba "0..*" --> "1" EstacionEsqui : se realiza en >
+Prueba "0..*" --> "1..*" Pista : utiliza >
+Pista "0..1" o-- "0..*" Pista : subpistas >
+
+@enduml

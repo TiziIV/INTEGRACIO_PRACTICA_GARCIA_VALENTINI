@@ -1,0 +1,103 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class Empresa {
+    - nombre: String
+    - porcentajeComision: double
+    - productos: List<Producto>
+    - reuniones: List<ReunionGeneral>
+    + getPorcentajeComision(): double
+    + setPorcentajeComision(porcentaje: double): void
+    + agregarProducto(producto: Producto): void
+    + celebrarReunion(fechaActual: LocalDate, fechaProxima: LocalDate): ReunionGeneral
+    + liquidarComisiones(reunion: ReunionGeneral, representantes: List<RepresentanteVentas>): void
+}
+
+class Producto {
+    - nombre: String
+    - precioVentaPublico: double
+    + getNombre(): String
+    + getPrecioVentaPublico(): double
+    + setPrecioVentaPublico(precio: double): void
+}
+
+class Cliente {
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    - fechaNacimiento: LocalDate
+    - fechaIngreso: LocalDate
+    + getNombre(): String
+    + getFechaIngreso(): LocalDate
+}
+
+abstract class RepresentanteVentas {
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    - fechaNacimiento: LocalDate
+    - cuitCuil: String
+    - fechaIncorporacion: LocalDate
+    - carteraClientes: List<Cliente>
+    - ticketsVendidos: List<TicketVenta>
+    + getNombre(): String
+    + getCuitCuil(): String
+    + agregarCliente(cliente: Cliente): void
+    + registrarTicketVenta(ticket: TicketVenta): void
+    + getVentasDesde(fechaDesde: LocalDate): List<TicketVenta>
+    + {abstract} calcularComision(fechaDesde: LocalDate, porcentaje: double): double
+}
+
+class Vendedor {
+    + calcularComision(fechaDesde: LocalDate, porcentaje: double): double
+}
+
+class Lider {
+    - fechaPromocionLider: LocalDate
+    - equipo: List<Vendedor>
+    + getFechaPromocionLider(): LocalDate
+    + agregarVendedorAlEquipo(vendedor: Vendedor): void
+    + getEquipo(): List<Vendedor>
+    + calcularComision(fechaDesde: LocalDate, porcentaje: double): double
+}
+
+class TicketVenta {
+    - fecha: LocalDate
+    - precioUnitario: double
+    - producto: Producto
+    - cliente: Cliente
+    + getFecha(): LocalDate
+    + getPrecioUnitario(): double
+    + getProducto(): Producto
+    + getCliente(): Cliente
+    + asignarCliente(cliente: Cliente): void
+}
+
+class ReunionGeneral {
+    - fechaCelebracion: LocalDate
+    - fechaProximaReunion: LocalDate
+    + getFechaCelebracion(): LocalDate
+    + getFechaProximaReunion(): LocalDate
+}
+
+' Herencia
+RepresentanteVentas <|-- Vendedor
+RepresentanteVentas <|-- Lider
+
+' Organización de la Fuerza de Ventas
+Empresa "1" *-- "1..*" Producto : fabrica >
+Empresa "1" *-- "0..*" ReunionGeneral : organiza >
+Empresa "1" o-- "1..*" RepresentanteVentas : fuerzaDeVentas >
+
+Lider "1" o-- "1..*" Vendedor : coordina equipo >
+RepresentanteVentas "1" o-- "0..*" Cliente : carteraClientes >
+
+' Ventas y Transacciones
+RepresentanteVentas "1" *-- "0..*" TicketVenta : genera >
+TicketVenta "0..*" --> "1" Producto : ampara >
+TicketVenta "0..*" --> "0..1" Cliente : venta final a >
+
+@enduml

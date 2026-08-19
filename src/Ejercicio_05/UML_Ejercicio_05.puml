@@ -1,0 +1,59 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class Restaurante {
+    - nombre: String
+    - platosOfrecidos: List<PlatoEnRestaurante>
+    + getNombre(): String
+    + agregarSucursal(sucursal: Sucursal): void
+    + agregarPlato(plato: Plato, precio: double): boolean
+    + getPlatos(): List<PlatoEnRestaurante>
+}
+
+class Sucursal {
+    - direccion: String
+    - telefono: String
+    + getDireccion(): String
+    + getRestaurante(): Restaurante
+}
+
+class Plato {
+    - nombre: String
+    - descripcion: String
+    + getNombre(): String
+}
+
+class PlatoEnRestaurante {
+    - restaurante: Restaurante
+    - plato: Plato
+    - precio: double
+    + getRestaurante(): Restaurante
+    + getPlato(): Plato
+    + getDetalle(): String
+}
+
+class Persona {
+    - nombre: String
+    - platosPreferidos: List<PlatoEnRestaurante>
+    - sucursalesFrecuentes: List<Sucursal>
+    - sucursalesOcasionales: List<Sucursal>
+    + getNombre(): String
+    + agregarPlatoPreferido(oferta: PlatoEnRestaurante): void
+    + frecuentarSucursal(sucursal: Sucursal): void
+    + concurrirOcasionalmente(sucursal: Sucursal): void
+    + leGustaPlatoEn(plato: Plato, rest: Restaurante): boolean
+}
+
+' Relaciones
+Restaurante "1" *-- "1..*" Sucursal : tiene >
+Restaurante "1" *-- "0..20" PlatoEnRestaurante : ofrece >
+PlatoEnRestaurante "0..*" --> "1" Plato : referencia a >
+
+Persona "0..*" --> "0..*" PlatoEnRestaurante : le gusta >
+Persona "0..*" --> "0..*" Sucursal : frecuenta >
+Persona "0..*" --> "0..*" Sucursal : concurre ocasional >
+
+@enduml

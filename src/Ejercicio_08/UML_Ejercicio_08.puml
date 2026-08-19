@@ -1,0 +1,100 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class TipoAvion {
+    - numeroModelo: String
+    - capacidad: int
+    - peso: double
+    + getNumeroModelo(): String
+    + getCapacidad(): int
+    + getPeso(): double
+}
+
+class Hangar {
+    - numero: int
+    - capacidad: int
+    - ubicacion: String
+    + getNumero(): int
+    + getCapacidad(): int
+    + tieneEspacio(): boolean
+    + agregarAvion(avion: Avion): void
+}
+
+class Avion {
+    - matricula: String
+    + getMatricula(): String
+    + getTipo(): TipoAvion
+    + getHangar(): Hangar
+    + setHangar(hangar: Hangar): void
+}
+
+abstract class Persona {
+    - nss: String
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    + getNss(): String
+    + getNombre(): String
+}
+
+class Piloto {
+    - numLicencia: String
+    - restricciones: String
+    + getNumLicencia(): String
+    + estaHabilitadoPara(tipo: TipoAvion): boolean
+    + agregarHabilitacion(tipo: TipoAvion): void
+}
+
+class Mecanico {
+    - salario: double
+    - turno: String
+    + getSalario(): double
+    + getTurno(): String
+    + puedeMantener(tipo: TipoAvion): boolean
+    + agregarHabilitacion(tipo: TipoAvion): void
+}
+
+class Propietario {
+}
+
+class PropiedadAvion {
+    - fechaAdquisicion: LocalDate
+    - esActual: boolean
+    + getFechaAdquisicion(): LocalDate
+    + isEsActual(): boolean
+}
+
+class Servicio {
+    - fecha: LocalDate
+    - horasInvertidas: double
+    - tipoTrabajo: String
+    + getFecha(): LocalDate
+    + getHorasInvertidas(): double
+    + getTipoTrabajo(): String
+}
+
+' Herencia
+Persona <|-- Piloto
+Persona <|-- Mecanico
+Persona <|-- Propietario
+
+' Relaciones de Avión con Hangar y Tipo
+Avion "0..*" --> "1" TipoAvion : es de tipo >
+Hangar "1" o-- "0..*" Avion : aloja >
+
+' Habilitaciones a Tipos de Avión
+Piloto "0..*" --> "1..*" TipoAvion : autorizado a volar >
+Mecanico "0..*" --> "1..*" TipoAvion : autorizado a mantener >
+
+' Propiedad y Adquisición
+Avion "1" <-- "0..*" PropiedadAvion
+PropiedadAvion "0..*" --> "1..*" Propietario : adquirido por >
+
+' Mantenimiento y Servicios
+Avion "1" <-- "0..*" Servicio : realizado en >
+Mecanico "1" <-- "0..*" Servicio : ejecutado por >
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class Pais {
+    - nombre: String
+    + getNombre(): String
+    + agregarProvincia(provincia: Provincia): void
+    + getCiudadesConDeficit(): List<Ciudad>
+    + getProvinciasConDeficit(): List<Provincia>
+}
+
+class Provincia {
+    - nombre: String
+    + getNombre(): String
+    + agregarCiudad(ciudad: Ciudad): void
+    + getCiudadesAuditadas(): List<Ciudad>
+    + getCiudadesConDeficit(): List<Ciudad>
+    + estaEnDeficit(): boolean
+}
+
+class Ciudad {
+    - nombre: String
+    - habitantes: int
+    - imp1: double
+    - imp2: double
+    - imp3: double
+    - imp4: double
+    - imp5: double
+    - gastoMantenimiento: double
+    + getNombre(): String
+    + getHabitantes(): int
+    + esAuditable(): boolean
+    + calcularTotalRecaudado(): double
+    + estaEnDeficit(): boolean
+}
+
+' Relaciones Todo-Parte (Composición)
+Pais "1" *-- "1..*" Provincia : contiene >
+Provincia "1" *-- "1..*" Ciudad : contiene >
+
+@enduml

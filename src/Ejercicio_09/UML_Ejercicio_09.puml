@@ -1,0 +1,127 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 10
+skinparam shadowing false
+
+class Museo {
+    - nombre: String
+    + agregarObjeto(objeto: ObjetoDeArte): void
+    + crearExposicion(expo: Exposicion): void
+}
+
+abstract class ObjetoDeArte {
+    - id: String
+    - titulo: String
+    - descripcion: String
+    - anioCreacion: Integer
+    - paisOrigen: String
+    - cultura: String
+    - epoca: String
+    + getId(): String
+    + getTitulo(): String
+    + getArtista(): Artista
+    + getRegimenTenencia(): RegimenTenencia
+}
+
+class Pintura {
+    - tipoPintura: String
+    - soporte: String
+    - estilo: String
+    + getTipoPintura(): String
+    + getSorte(): String
+    + getEstilo(): String
+}
+
+class Escultura {
+    - material: String
+    - altura: double
+    - peso: double
+    - estilo: String
+    + getMaterial(): String
+    + getAltura(): double
+    + getPeso(): double
+}
+
+class OtroObjeto {
+    - tipoGenerico: String
+    + getTipoGenerico(): String
+}
+
+abstract class RegimenTenencia {
+}
+
+class ColeccionPermanente {
+    - fechaAdquisicion: LocalDate
+    - coste: double
+    - enExposicion: boolean
+    + getFechaAdquisicion(): LocalDate
+    + getCoste(): double
+    + isEnExposicion(): boolean
+    + setEnExposicion(estado: boolean): void
+}
+
+class ObjetoEnPrestamo {
+    - fechaRecepcion: LocalDate
+    - fechaDevolucion: LocalDate
+    + getFechaRecepcion(): LocalDate
+    + getFechaDevolucion(): LocalDate
+    + getColeccionOrigen(): ColeccionExterna
+}
+
+class Artista {
+    - nombre: String
+    - fechaNacimiento: LocalDate
+    - fechaDefuncion: LocalDate
+    - paisOrigen: String
+    - epoca: String
+    - estiloPrincipal: String
+    - descripcion: String
+    + getNombre(): String
+    + getFechaNacimiento(): LocalDate
+    + getFechaDefuncion(): LocalDate
+}
+
+class Exposicion {
+    - nombre: String
+    - fechaComienzo: LocalDate
+    - fechaFin: LocalDate
+    - objetosExhibidos: List<ObjetoDeArte>
+    + getNombre(): String
+    + agregarObjetoExhibido(objeto: ObjetoDeArte): void
+    + getObjetosExhibidos(): List<ObjetoDeArte>
+}
+
+class ColeccionExterna {
+    - nombre: String
+    - tipo: String
+    - descripcion: String
+    - direccion: String
+    - telefono: String
+    - personaContacto: String
+    + getNombre(): String
+    + getTipo(): String
+    + getPersonaContacto(): String
+}
+
+' Herencia de Tipos Físicos de Objeto
+ObjetoDeArte <|-- Pintura
+ObjetoDeArte <|-- Escultura
+ObjetoDeArte <|-- OtroObjeto
+
+' Herencia de Régimen de Tenencia
+RegimenTenencia <|-- ColeccionPermanente
+RegimenTenencia <|-- ObjetoEnPrestamo
+
+' Relaciones Todo-Parte y Estructura
+Museo "1" *-- "0..*" ObjetoDeArte : custodia >
+Museo "1" *-- "0..*" Exposicion : organiza >
+
+ObjetoDeArte "1" *-- "1" RegimenTenencia : regimen >
+ObjetoDeArte "0..*" --> "0..1" Artista : creado por >
+
+Exposicion "0..*" o-- "1..*" ObjetoDeArte : exhibe >
+
+ObjetoEnPrestamo "0..*" --> "1" ColeccionExterna : cedido por >
+
+@enduml
