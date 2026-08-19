@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)">
+    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -130,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787101060505</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)">
+      <option name="closed" value="true" />
+      <created>1787101619728</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1787101619728</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +157,7 @@
     <MESSAGE value="Agrego diagrama Ejercicio 2" />
     <MESSAGE value="Ejercicio 2 UML" />
     <MESSAGE value="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)" />
+    <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)" />
   </component>
 </project>
