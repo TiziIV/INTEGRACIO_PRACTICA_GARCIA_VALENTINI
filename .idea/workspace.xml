@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_02/Ejercicio2.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_02/UML/Ejercicio2.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_02/UML-Ejercicio2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_02/UML/UML-Ejercicio2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_04/UML-Ejercicio4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_04/UML/UML-Ejercicio4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_04/UML_Ejercicio_04.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_04/UML/UML_Ejercicio_04.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_06/UML-Ejercicio6.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_06/UML/UML-Ejercicio6.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_06/UML_Ejercicio_06.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_06/UML/UML_Ejercicio_06.puml" afterDir="false" />
-    </list>
+    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 6 y 8)(CAMBIO ALGUNAS CARPETAS DE UML)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +71,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_08\UML" />
       <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_06\UML" />
       <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_04\UML" />
       <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_02\UML" />
@@ -156,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787103649907</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 6 y 8)(CAMBIO ALGUNAS CARPETAS DE UML)">
+      <option name="closed" value="true" />
+      <created>1787346946055</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1787346946055</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +177,7 @@
     <MESSAGE value="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)" />
     <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)" />
     <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)" />
+    <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 6 y 8)(CAMBIO ALGUNAS CARPETAS DE UML)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 6 y 8)(CAMBIO ALGUNAS CARPETAS DE UML)" />
   </component>
 </project>
