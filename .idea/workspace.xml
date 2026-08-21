@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)">
+    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio_02/Ejercicio2.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_02/UML/Ejercicio2.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio_02/UML-Ejercicio2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_02/UML/UML-Ejercicio2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio_04/UML-Ejercicio4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_04/UML/UML-Ejercicio4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio_04/UML_Ejercicio_04.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_04/UML/UML_Ejercicio_04.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio_06/UML-Ejercicio6.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_06/UML/UML-Ejercicio6.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio_06/UML_Ejercicio_06.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_06/UML/UML_Ejercicio_06.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,29 +56,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "E:/Tiziano Facultad/2DO SEMESTRE/PROGRAMACION/INTEGRACION/INTEGRACIO_PRACTICA_GARCIA_VALENTINI/src/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Tiziano Facultad/2DO SEMESTRE/PROGRAMACION/INTEGRACION/INTEGRACIO_PRACTICA_GARCIA_VALENTINI/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_06\UML" />
+      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_04\UML" />
+      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_02\UML" />
       <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_10" />
     </key>
   </component>
@@ -139,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787101619728</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)">
+      <option name="closed" value="true" />
+      <created>1787103649907</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1787103649907</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +175,7 @@
     <MESSAGE value="Ejercicio 2 UML" />
     <MESSAGE value="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)" />
     <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)" />
+    <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)" />
   </component>
 </project>
