@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="completo codigo ejercicio 3 y acomodo uml">
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio_05/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio_05/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio_05/Plato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio_05/PlatoEnRestaurante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio_05/Restaurante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio_05/Sucursal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_05/UML-Ejercicio5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_05/UML/UML-Ejercicio5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_05/UML_Ejercicio_05.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_05/UML/UML_Ejercicio_05.puml" afterDir="false" />
-    </list>
+    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="Commit tambien ejercicio 7" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +68,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_07\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_05\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_03\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_01\UML" />
@@ -159,7 +151,23 @@
       <option name="project" value="LOCAL" />
       <updated>1787411907682</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit ejercicio 5 completo, sigo subiendoproximos">
+      <option name="closed" value="true" />
+      <created>1787412098116</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1787412098116</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit tambien ejercicio 7">
+      <option name="closed" value="true" />
+      <created>1787412373678</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1787412373678</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +187,8 @@
     <MESSAGE value="Agrego carpeta UML y archivos para ejercicio 1" />
     <MESSAGE value="Codigo ejercicio 1." />
     <MESSAGE value="completo codigo ejercicio 3 y acomodo uml" />
-    <option name="LAST_COMMIT_MESSAGE" value="completo codigo ejercicio 3 y acomodo uml" />
+    <MESSAGE value="commit ejercicio 5 completo, sigo subiendoproximos" />
+    <MESSAGE value="Commit tambien ejercicio 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit tambien ejercicio 7" />
   </component>
 </project>
