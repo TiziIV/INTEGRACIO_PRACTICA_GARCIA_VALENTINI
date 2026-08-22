@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="Commit tambien ejercicio 7" />
+    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="Commit terminado detalles de codigo ejercicio 9" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,11 +68,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_09\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_07\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_05\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_03\UML" />
       <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_01\UML" />
-      <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_02\UML" />
     </key>
   </component>
   <component name="RunManager">
@@ -167,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787412373678</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commit terminado detalles de codigo ejercicio 9">
+      <option name="closed" value="true" />
+      <created>1787412692329</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1787412692329</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +197,7 @@
     <MESSAGE value="completo codigo ejercicio 3 y acomodo uml" />
     <MESSAGE value="commit ejercicio 5 completo, sigo subiendoproximos" />
     <MESSAGE value="Commit tambien ejercicio 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit tambien ejercicio 7" />
+    <MESSAGE value="Commit terminado detalles de codigo ejercicio 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit terminado detalles de codigo ejercicio 9" />
   </component>
 </project>
