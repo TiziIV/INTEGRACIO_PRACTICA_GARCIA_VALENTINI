@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="ACTUALIZO(AÑADO MAIN A EJERCICIO 8)">
+    <list default="true" id="515579d2-08c8-460d-999b-cc46ff2174c0" name="Changes" comment="Agrego carpeta UML y archivos para ejercicio 1">
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Circulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Cuadrado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Cuadrilatero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Elipse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Figura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/FiguraBasica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/FiguraCompuesta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Lado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Poligono.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Punto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Rectangulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicio_01/Triangulo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_8_2026_09_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_10/UML-Ejercicio10.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_10/UML/UML-Ejercicio10.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio_10/UML_Ejercicio_10.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio_10/UML/UML_Ejercicio_10.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/INTEGRACIO_PRACTICA_GARCIA_VALENTINI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/INTEGRACIO_PRACTICA_GARCIA_VALENTINI.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +30,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -31,12 +43,12 @@
     &quot;assignee&quot;: &quot;TiziIV&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/TiziIV/INTEGRACIO_PRACTICA_GARCIA_VALENTINI.git&quot;,
-    &quot;accountId&quot;: &quot;a28d44e4-2cc7-40b8-b35f-354f4ec76908&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/TiziIV/INTEGRACIO_PRACTICA_GARCIA_VALENTINI",
+    "accountId": "a5f3fd25-d777-4a86-8b28-da54d0ca6262"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -46,41 +58,49 @@
 }</component>
   <component name="ProjectId" id="3I5XALoZXfqzbHQEu2cauC3Avub" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Tiziano Facultad/2DO SEMESTRE/PROGRAMACION/INTEGRACION/INTEGRACIO_PRACTICA_GARCIA_VALENTINI/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "E:/Tiziano Facultad/2DO SEMESTRE/PROGRAMACION/INTEGRACION/INTEGRACIO_PRACTICA_GARCIA_VALENTINI/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_10\UML" />
-      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_08\UML" />
-      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_06\UML" />
-      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_04\UML" />
-      <recent name="E:\Tiziano Facultad\2DO SEMESTRE\PROGRAMACION\INTEGRACION\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_02\UML" />
+      <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_01\UML" />
+      <recent name="C:\Users\Juan\IdeaProjects\INTEGRACIO_PRACTICA_GARCIA_VALENTINI\src\Ejercicio_02\UML" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="INTEGRACIO_PRACTICA_GARCIA_VALENTINI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="INTEGRACIO_PRACTICA_GARCIA_VALENTINI" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -121,55 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787058704761</updated>
     </task>
-    <task id="LOCAL-00004" summary="Ejercicio 2 UML">
+    <task id="LOCAL-00004" summary="Agrego carpeta UML y archivos para ejercicio 1">
       <option name="closed" value="true" />
-      <created>1787058843939</created>
+      <created>1787410773190</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1787058843939</updated>
+      <updated>1787410773190</updated>
     </task>
-    <task id="LOCAL-00005" summary="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)">
-      <option name="closed" value="true" />
-      <created>1787101060505</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1787101060505</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)">
-      <option name="closed" value="true" />
-      <created>1787101619728</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1787101619728</updated>
-    </task>
-    <task id="LOCAL-00007" summary="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)">
-      <option name="closed" value="true" />
-      <created>1787103649907</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1787103649907</updated>
-    </task>
-    <task id="LOCAL-00008" summary="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 6 y 8)(CAMBIO ALGUNAS CARPETAS DE UML)">
-      <option name="closed" value="true" />
-      <created>1787346946055</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1787346946055</updated>
-    </task>
-    <task id="LOCAL-00009" summary="ACTUALIZO(AÑADO MAIN A EJERCICIO 8)">
-      <option name="closed" value="true" />
-      <created>1787347044884</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1787347044884</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,11 +166,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Agrego diagrama Ejercicio 2" />
     <MESSAGE value="Ejercicio 2 UML" />
-    <MESSAGE value="ACTUALIZO(AÑADO UML/SVG DE 3 A 11)" />
-    <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 2)" />
-    <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 4)" />
-    <MESSAGE value="ACTUALIZO(AÑADO CODEO DEL EJERCICIO 6 y 8)(CAMBIO ALGUNAS CARPETAS DE UML)" />
-    <MESSAGE value="ACTUALIZO(AÑADO MAIN A EJERCICIO 8)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZO(AÑADO MAIN A EJERCICIO 8)" />
+    <MESSAGE value="Agrego carpeta UML y archivos para ejercicio 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego carpeta UML y archivos para ejercicio 1" />
   </component>
 </project>
