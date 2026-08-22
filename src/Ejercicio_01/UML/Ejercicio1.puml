@@ -1,0 +1,69 @@
+@startuml
+
+' Ocultar iconos para que quede limpio el diagrama
+hide circle
+skinparam classAttributeIconSize 0
+
+' --- CLASES ESTRUCTURALES ---
+abstract class Figura {
+}
+
+class FiguraCompuesta {
+}
+
+abstract class FiguraBasica {
+}
+
+class Elipse {
+}
+
+class Circulo {
+}
+
+class Poligono {
+}
+
+class Triangulo {
+}
+
+class Cuadrilatero {
+}
+
+class Rectangulo {
+}
+
+class Cuadrado {
+}
+
+class Lado {
+}
+
+class Punto {
+    - x: double
+    - y: double
+}
+
+' --- RELACIONES ---
+
+' Patrón Composite
+Figura <|-- FiguraCompuesta
+Figura <|-- FiguraBasica
+FiguraCompuesta o-- "1..*" Figura : compuesta por >
+
+' Herencia Geométrica
+FiguraBasica <|-- Elipse
+FiguraBasica <|-- Poligono
+
+Elipse <|-- Circulo
+
+Poligono <|-- Triangulo
+Poligono <|-- Cuadrilatero
+
+Cuadrilatero <|-- Rectangulo
+Rectangulo <|-- Cuadrado
+
+' Composición (Todo-Parte fuerte)
+Poligono *-- "3..*" Lado : tienen >
+Lado *-- "2" Punto : definidos por >
+
+@enduml
